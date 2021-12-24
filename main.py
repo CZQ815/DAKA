@@ -20,4 +20,3 @@ if result:
     person.push('打卡成功！')
 else:
     person.push('打卡失败！')
-
