@@ -10,7 +10,6 @@ token = 'xxxxxxxxxxxxx'
     
 person = ClockIn.Daka(username, password, token)
 
-result = False
 for i in range(6):
     result = person.run()
     if result:
