@@ -31,10 +31,10 @@ class Daka(object):
             driver.find_element(By.ID, 'un').send_keys(self.un)
             driver.find_element(By.ID, 'pd').send_keys(self.pd)
             driver.find_element(By.ID, 'index_login_btn').click()
-            time.sleep(1)
+            time.sleep(3)
             # 疫情上报界面
             driver.find_element(By.ID, 'preview_start_button').click()
-            time.sleep(1)
+            time.sleep(3)
             # 疫情表单填报界面
             # 是否接触过半个月内有疫情重点地区旅居史的人员，点击否
             driver.find_element(By.XPATH, '//*[@name="fieldYQJLsfjcqtbl" and @value="2"]').click()
@@ -46,7 +46,7 @@ class Daka(object):
             driver.find_element(By.XPATH, '//*[@name="fieldCNS"]').click()
             # 点击提交
             driver.find_element(By.XPATH, '//*[@class="command_button_content"]').click()
-            time.sleep(1)
+            time.sleep(3)
             driver.close()
             result = True
         except Exception:
