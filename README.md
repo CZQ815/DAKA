@@ -20,15 +20,6 @@
 
 # 4、服务器安装chrome
 
-1）所提供google-chrome版本为96.0.4664.110
-
-```shell
-~/DAKA$ sudo apt-get -f install && sudo dpkg -i google-chrome*.deb &&  && rm google-chrome-stable_current_amd64.deb
-~/DAKA$ google-chrome --version  # 查看所安装google-chrome版本
-```
-
-2）若要自行下载安装最新稳定版，参考如下：
-
 ```shell
 ~/DAKA$ sudo apt-get install libxss1 libappindicator1 libindicator7  # 安装chrome依赖
 ~/DAKA$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  # 拉取最新稳定版google-chrome
@@ -36,9 +27,13 @@
 ~/DAKA$ google-chrome --version  # 查看所安装google-chrome版本
 ```
 
+（当前最新稳定版为96.0.4664.110）
+
 # 5、服务器安装驱动chromedriver
 
-chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.4664.45(目前来看，与110的google-chrome能兼容)
+chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.4664.45
+
+(目前来看，与110的google-chrome能兼容，但后期最好将版本统一)
 
 1）若版本与第3步所下google-chrome版本一致，直接授予可执行权限即可。
 
