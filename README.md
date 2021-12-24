@@ -47,7 +47,7 @@ chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.46
 
 # 5、注册推送加
 
-打开网站http://www.pushplus.plus/或者关注微信公众号“pushplus 推送加”，注册账号并激活消息，保存个人token。
+打开网页http://www.pushplus.plus/ 或者关注微信公众号“pushplus 推送加”，注册账号并激活消息，保存个人token。
 
 # 6、修改信息
 
