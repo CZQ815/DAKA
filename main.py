@@ -17,7 +17,7 @@ for i in range(6):
         break
 
 if result:
-    person.pushplus('打卡成功！')
+    person.push('打卡成功！')
 else:
-    person.pushplus('打卡失败！')
+    person.push('打卡失败！')
 
