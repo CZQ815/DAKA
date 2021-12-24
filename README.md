@@ -64,7 +64,7 @@ chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.46
 
 ```shell
 ~/DAKA$ pwd  # 查看main.py所在路径
-~/DAKA$ crontab -e  # 或vi /etc/crontab
+~/DAKA$ sudo vi /etc/crontab
 # 文末添加定时任务
-15 8 * * * python3 PATH/main.py  # PATH为main.py所在路径，保存并退出
+15 8 * * * user-name python3 PATH/main.py  # user-name为主机当前用户名，PATH为main.py所在路径，保存并退出
 ```
