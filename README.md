@@ -23,8 +23,9 @@
 ```shell
 ~/DAKA$ sudo apt-get install libxss1 libappindicator1 libindicator7  # 安装chrome依赖
 ~/DAKA$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  # 拉取最新稳定版google-chrome
-~/DAKA$ sudo apt-get -f install && sudo dpkg -i google-chrome*.deb && rm google-chrome-stable_current_amd64.deb
-~/DAKA$ google-chrome --version  # 查看所安装google-chrome版本
+~/DAKA$ sudo apt-get -f install
+~/DAKA$ sudo dpkg -i google-chrome*.deb
+~/DAKA$ rm google-chrome-stable_current_amd64.deb && google-chrome --version  # 查看所安装google-chrome版本
 ```
 
 （当前最新稳定版为96.0.4664.110）
