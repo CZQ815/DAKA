@@ -21,7 +21,6 @@ class DAKA(object):
         self.options.add_argument('--headless')
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--no-sandbox')
-
         
     def pushplus(self, content):
         # pushplus推送加消息推送接口
@@ -35,7 +34,6 @@ class DAKA(object):
         body = json.dumps(data).encode(encoding='utf-8')
         headers = {'Content-Type': 'application/json'}
         requests.post(pushplus_url, data=body, headers=headers)
-
 
     def run(self):
         # 执行打卡
@@ -63,6 +61,6 @@ class DAKA(object):
             driver.find_element(By.XPATH, '//*[@class="command_button_content"]').click()
             driver.close()
             result = True
-        except:
+        except Exception:
             result = False
         return result
