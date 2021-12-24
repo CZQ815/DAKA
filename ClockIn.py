@@ -11,18 +11,20 @@ from selenium.webdriver.common.by import By
 class DAKA(object):
     def __init__(self, un, pd, token):
         self.url = 'https://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start'
-        self.un = un  #GZHU用户名
-        self.pd = pd   #GZHU密码
-        self.token = token  #Pushplus个人token
+        self.un = un  # GZHU学号
+        self.pd = pd  # GZHU密码
+        self.token = token  # Pushplus个人token
+        # 设置驱动执行路径
         self.service = Service("/usr/local/bin/chromedriver")
-        #webdriver不弹窗设置
+        # 设置webdriver不弹窗
         self.options = Options()
         self.options.add_argument('--headless')
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--no-sandbox')
 
-
+        
     def pushplus(self, content):
+        # pushplus推送加消息推送接口
         title = '打卡结果'  # 标题内容
         pushplus_url = 'http://www.pushplus.plus/send'
         data = {
@@ -36,10 +38,11 @@ class DAKA(object):
 
 
     def run(self):
+        # 执行打卡
         driver = webdriver.Chrome(service=self.service, options=self.options)
         try:
             driver.get(self.url)
-            #登陆界面
+            # 账号登录界面
             driver.find_element(By.ID, 'un').send_keys(self.un)
             driver.find_element(By.ID, 'pd').send_keys(self.pd)
             driver.find_element(By.ID, 'index_login_btn').click()
