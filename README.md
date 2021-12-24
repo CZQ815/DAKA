@@ -8,8 +8,8 @@
 
 ```shell
 ~/DAKA$ sudo apt update && sudo apt upgrade
-~/DAKA$ sudo apt install unzip  #如已安装，请忽略
-~/DAKA$ sudo apt install python3-pip  #如已安装，请忽略
+~/DAKA$ sudo apt install unzip  # 如已安装，请忽略
+~/DAKA$ sudo apt install python3-pip  # 如已安装，请忽略
 ```
 
 # 3、安装依赖
@@ -21,10 +21,10 @@
 # 4、服务器安装chrome
 
 ```shell
-~/DAKA$ sudo apt-get install libxss1 libappindicator1 libindicator7  #安装chrome依赖
-~/DAKA$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  #拉取最新稳定版google-chrome
+~/DAKA$ sudo apt-get install libxss1 libappindicator1 libindicator7  # 安装chrome依赖
+~/DAKA$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  # 拉取最新稳定版google-chrome
 ~/DAKA$ sudo dpkg -i google-chrome*.deb && sudo apt-get install -f && rm google-chrome-stable_current_amd64.deb
-~/DAKA$ google-chrome --version  #查看所安装google-chrome版本
+~/DAKA$ google-chrome --version  # 查看所安装google-chrome版本
 ```
 
 # 4、服务器安装驱动chromedriver
@@ -40,7 +40,7 @@ chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.46
 2）若版本不一致，下载对应驱动的方法如下：
 
 ```shell
-#先打开网页https://chromedriver.storage.googleapis.com，查找并复制对应版本的下载链接
+# 先打开网页https://chromedriver.storage.googleapis.com，查找并复制对应版本的下载链接
 ~/DAKA$ cd /usr/local/bin && wget https://chromedriver.storage.googleapis.com/xx.x.xxxx.xx/chromedriver_linux64.zip
 /usr/local/bin$ unzip chromedriver_linux64.zip && sudo chmod +x chromedriver && rm chromedriver_linux64.zip
 ```
@@ -60,6 +60,6 @@ chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.46
 ```shell
 ~/DAKA$ pwd  # 查看main.py所在路径
 ~/DAKA$ crontab -e  # 或vi /etc/crontab
-#文末添加定时任务
+# 文末添加定时任务
 15 8 * * * python3 PATH/main.py  # PATH为main.py所在路径，保存并退出
 ```
