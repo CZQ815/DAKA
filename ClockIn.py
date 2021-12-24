@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
-class DAKA(object):
+class Daka(object):
     def __init__(self, un, pd, token):
         self.url = 'https://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start'
         self.un = un  # GZHU学号
@@ -22,10 +22,10 @@ class DAKA(object):
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--no-sandbox')
         
-    def pushplus(self, content):
+    def push(self, content):
         # pushplus推送加消息推送接口
         title = '打卡结果'  # 标题内容
-        pushplus_url = 'http://www.pushplus.plus/send'
+        push_url = 'http://www.pushplus.plus/send'
         data = {
             "token": self.token,
             "title": title,
@@ -33,7 +33,7 @@ class DAKA(object):
         }
         body = json.dumps(data).encode(encoding='utf-8')
         headers = {'Content-Type': 'application/json'}
-        requests.post(pushplus_url, data=body, headers=headers)
+        requests.post(push_url, data=body, headers=headers)
 
     def run(self):
         # 执行打卡
@@ -64,3 +64,4 @@ class DAKA(object):
         except Exception:
             result = False
         return result
+
