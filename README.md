@@ -27,7 +27,7 @@
 ~/DAKA$ google-chrome --version  # 查看所安装google-chrome版本
 ```
 
-# 4、服务器安装驱动chromedriver
+# 5、服务器安装驱动chromedriver
 
 chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.4664.45。
 
@@ -45,15 +45,15 @@ chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.46
 /usr/local/bin$ unzip chromedriver_linux64.zip && sudo chmod +x chromedriver && rm chromedriver_linux64.zip
 ```
 
-# 5、注册推送加
+# 6、注册推送加
 
 打开网页http://www.pushplus.plus/ 或者关注微信公众号“pushplus 推送加”，注册账号并激活消息，保存个人token。
 
-# 6、修改信息
+# 7、修改信息
 
 修改`main.py`文件里的用户名、密码和个人token。
 
-# 7、设置Linux自带定时任务
+# 8、设置Linux自带定时任务
 
 例：设置每日早上8:15打卡如下
 
