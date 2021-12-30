@@ -33,7 +33,7 @@ class Daka(object):
             driver.find_element(By.ID, 'index_login_btn').click()
             time.sleep(3)
             # 疫情上报界面
-            driver.find_element(By.ID, 'preview_start_button').click()
+            driver.find_element(By.XPATH, '//*[@id="preview_start_button"]').click()
             time.sleep(3)
             # 疫情表单填报界面
             # 是否接触过半个月内有疫情重点地区旅居史的人员，点击否
