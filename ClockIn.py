@@ -36,6 +36,8 @@ class Daka(object):
             driver.find_element(By.XPATH, '//*[@id="preview_start_button"]').click()
             time.sleep(3)
             # 疫情表单填报界面
+            # 当日是否外出。点击否
+            driver.find_element(By.XPATH, '//*[@name="fieldJBXXdrsfwc" and @value="2"]').click()
             # 是否接触过半个月内有疫情重点地区旅居史的人员，点击否
             driver.find_element(By.XPATH, '//*[@name="fieldYQJLsfjcqtbl" and @value="2"]').click()
             # 健康码是否为绿码，点击是
