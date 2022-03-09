@@ -45,7 +45,7 @@ chromedriver须与google-chrome版本一致，所提供的驱动版本为96.0.46
 2）若版本不一致，下载对应驱动的方法如下：
 
 ```shell
-# 先打开网页http://npm.taobao.org/mirrors/chromedriver，查找并复制对应版本的下载链接
+# 先打开网页https://registry.npmmirror.com/binary.html?path=chromedriver/，查找并复制对应版本的下载链接
 ~/DAKA$ cd /usr/local/bin && wget http://npm.taobao.org/mirrors/chromedriver/96.0.4664.45/chromedriver_linux64.zip
 /usr/local/bin$ unzip chromedriver_linux64.zip && sudo chmod +x chromedriver && rm chromedriver_linux64.zip
 ```
