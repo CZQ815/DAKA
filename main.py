@@ -1,4 +1,4 @@
-# encoding:utf-8
+# -*- coding:utf-8 -*-
 import ClockIn
 
 # 校园网学号
@@ -11,11 +11,11 @@ token = 'xxxxxxxxxxxxx'
 person = ClockIn.Daka(username, password, token)
 
 for i in range(6):
-    result = person.run()
-    if result:
+    res = person.run()
+    if res:
         break
 
-if result:
+if res:
     person.push('打卡成功！')
 else:
     person.push('打卡失败！')
