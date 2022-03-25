@@ -36,7 +36,9 @@ class Daka(object):
             driver.find_element(By.XPATH, '//*[@id="preview_start_button"]').click()
             time.sleep(3)
             # 疫情表单填报界面
-            # 当日是否外出。点击否
+            # 本人身体状况，点击正常
+            driver.find_element(By.XPATH, '//*[@name="fieldSTQKbrstzk1" and @value="1"]').click()
+            # 当日是否外出，点击否
             driver.find_element(By.XPATH, '//*[@name="fieldJBXXdrsfwc" and @value="2"]').click()
             # 是否接触过半个月内有疫情重点地区旅居史的人员，点击否
             driver.find_element(By.XPATH, '//*[@name="fieldYQJLsfjcqtbl" and @value="2"]').click()
@@ -67,4 +69,3 @@ class Daka(object):
         body = json.dumps(data).encode(encoding='utf-8')
         headers = {'Content-Type': 'application/json'}
         requests.post(push_url, data=body, headers=headers)
-        
